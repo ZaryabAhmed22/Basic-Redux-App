@@ -22,4 +22,8 @@ useSelector() is used to get a chunk of state from the store.
 10. connect() takes in 2 parameters and bot are functions
 i)- First function maps redux state to props which will be recieved in the Component. It recieves state(comming from the redux store) and returns ab object, where keys will be used as props, and the values are the logic.
 
-ii)- The second function which is normally named as mapDisparchToProps(), is equivalent to usign disptach. Used to store disptach function to props. When this function is executed, it sends dispatch to the redux store. It recieves dispatch function as an argument and retuns an object in which keys are the props and values call the dispatch function and set up our actions
+ii)- The second function which is normally named as mapDisparchToProps(), is equivalent to usign disptach. Used to store disptach function to props. When this function is executed, it sends dispatch to the redux store. It recieves dispatch function as an argument and retuns an object in which keys are the props and values call the dispatch function and set up our actions.
+
+>> ACTION PAYLOADS
+
+>> MULTIPLE STATES
