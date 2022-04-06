@@ -25,5 +25,11 @@ i)- First function maps redux state to props which will be recieved in the Compo
 ii)- The second function which is normally named as mapDisparchToProps(), is equivalent to usign disptach. Used to store disptach function to props. When this function is executed, it sends dispatch to the redux store. It recieves dispatch function as an argument and retuns an object in which keys are the props and values call the dispatch function and set up our actions.
 
 >> ACTION PAYLOADS
+11. We can pass other keys in dispatch other than only "actionc.type", we can pass any key to use it rather than hard coding it in our reducer logiic.
 
 >> MULTIPLE STATES
+12. To deal with multiple states we can set other key-value pairs in our initial state.
+
+>> CORRECT WAY TO INTEREACT STATE
+- The state object we return in the reducer overwrites the previous state rather than editing.
+- Never directly mutate tthe state, never change the existing state. Becuase objects and arrays are reference types, it's easy to over wrtie them.
