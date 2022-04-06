@@ -46,3 +46,21 @@ iii) reducers object which contain all the methods(actions)
 3. There's no need of if checks since the createSlice() automatically calls different reducer methods according to the  situation.
 
 4. In these reducer maps we are allowed to mutate the state. >> Using tool kit we can't acceidentaly mutate the existing state becuase the redux toolkit uses another package known as Emer which detects the code which is mutating the state, creates a clone of the state and turns it into immutable code.
+
+5. To make use of the state slice, store the created slice into a variable.
+
+6. Then, inside the createStore, pass the sliceName.reducer for example createStore(counterSlice.reducer). BUT, in large applications, there may be alot of reducers, and combining them is very difficult with createStore, therefore we use configureStore() from redux-toolkit.
+
+7. >> configureStore()
+- takes in an object with an expected key "reducer" and the value assigned to this reducer would be the sliceName.reducer, or if there are multiple reducers, we can pass another object as value for "reducer key, in which we can give name to our reducers and pass the reducers as the value(in the key value pair). The configureStore() conbines all the reducers into one single global reducer.
+
+>> const store = configureStore({
+  reducer: counterSlice.reducer,
+});
+
+>> const store = configureStore({
+  reducer: {
+  counter: counterSlice.reducer
+  name: nameSlice.reducer
+  }
+});
