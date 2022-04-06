@@ -1,0 +1,11 @@
+1. Created a simple redux store, but without any subscriber. Export the store as default
+
+2. To provide the store, import the Provider component form the react-redux library and wrap the whole <App /> by the <Provider></Provider>.
+
+3. Pass in store prop to the provider to indicate the Provider which store to provide i.e <Provider store={storeCreated}></Provider>.
+
+>> USING STORE IN A COMPONENT
+4. Make use of the useSelector() hook from "react-redx" library
+useSelector() is used to get a chunk of state from the store.
+
+5. The useSelector() reuires an arrow function that uses state(coming from the redux store) as a parameter and takes out the wanted peice of state. 
