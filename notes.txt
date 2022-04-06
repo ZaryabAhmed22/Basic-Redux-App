@@ -9,3 +9,17 @@
 useSelector() is used to get a chunk of state from the store.
 
 5. The useSelector() reuires an arrow function that uses state(coming from the redux store) as a parameter and takes out the wanted peice of state. 
+
+6. To dispatch the action, we will use another react-redux hook, useDispatch(). This hook return a function so we can store the it into a vatiable i.e const disptachFunction = useDispatch()
+
+7. Call the dispatch function in the desired place with the object parameter that specifies the tpye of actions.  
+
+>> REDUX WITH CLASS BASED COMPONENTS
+8. Makes use of the connect form react-redux library.
+
+9. connect is a higher order component. When it executes, it returns a function, that then takes in our Class Component as an argument to execute
+
+10. connect() takes in 2 parameters and bot are functions
+i)- First function maps redux state to props which will be recieved in the Component. It recieves state(comming from the redux store) and returns ab object, where keys will be used as props, and the values are the logic.
+
+ii)- The second function which is normally named as mapDisparchToProps(), is equivalent to usign disptach. Used to store disptach function to props. When this function is executed, it sends dispatch to the redux store. It recieves dispatch function as an argument and retuns an object in which keys are the props and values call the dispatch function and set up our actions
