@@ -11,7 +11,7 @@ const counterSlice = createSlice({
       state.counter++;
     },
     increaseByFive(state, action) {
-      state.counter = state.counter + action.amount;
+      state.counter = state.counter + action.payload; //payload is default key used by the toolkit
     },
     decrement(state) {
       state.counter--;
@@ -22,9 +22,13 @@ const counterSlice = createSlice({
   },
 });
 
+//passing reducers to our store
 const store = configureStore({
   reducer: counterSlice.reducer,
 });
+
+//dispatching actions by action creator methods
+export const counterActions = counterSlice.actions;
 
 export default store;
 

@@ -64,3 +64,7 @@ iii) reducers object which contain all the methods(actions)
   name: nameSlice.reducer
   }
 });
+
+8. To disptach actions, we will store sliceName.actions in a variable and export it, though exporting the actions to the componentns where we nedd them.
+
+9. The redux toolkit automatically creates action objects with a unique identifier and payloads. We don't need to create the identifier by ourselves.
